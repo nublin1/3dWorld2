@@ -1,20 +1,17 @@
-
+module;
 #include <GL/glew.h>
 
 #include <tuple>
 #include <vector>
 #include <string>
+#include <iostream>
 #include <fileSystem>
 
-export module ShaderProgram;
+export module ShaderSystem;
 
-export namespace ShaderProgram {
-	struct BaseShader {
-		GLint shaderID;
-		GLenum shadertype;
-		std::string shaderName;
-	};
+import BaseShader;
 
+export namespace ShaderSystem {
 	class ShaderProgram {
 	public:
 		ShaderProgram() {};
@@ -25,6 +22,19 @@ export namespace ShaderProgram {
 			m_shaderFolder = std::get<3>(shadProgram);
 		}
 		~ShaderProgram() {};
+
+		void reloadShader() {
+			glLinkProgram(shaderProgramID);
+			for (auto shad : shaders) {
+				glDeleteShader(shad.shaderID);
+			}
+			glDeleteProgram(shaderProgramID);
+
+			if (m_shaderFolder != "") {
+				//loadShadersInFolder(m_shaderFolder);
+				isReloaded = true;
+			}
+		}
 
 		void useShaderProgram() const { glUseProgram(shaderProgramID); }
 

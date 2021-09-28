@@ -1,8 +1,8 @@
-#include <string>
+//#include <string>
 
 export module GameObject;
 
-
+import std.core;
 
 export class GameObject {
 protected:
