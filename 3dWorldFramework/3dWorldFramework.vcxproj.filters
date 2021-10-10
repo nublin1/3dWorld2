@@ -53,5 +53,8 @@
     <ClCompile Include="BaseShader.ixx">
       <Filter>Файлы заголовков\ShadersManager</Filter>
     </ClCompile>
+    <ClCompile Include="BaseWindow.ixx">
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -14,6 +14,7 @@ import std.core;
 
 import ScreenInfo;
 import Time;
+import BaseWindow;
 
 export module BaseApplication;
 
@@ -39,13 +40,17 @@ public:
 			SDL_Event event;
 
 			Time::computeDeltaTime();		
+
+			
 			
 
-			while (SDL_PollEvent(&event)) {
+			while (SDL_PollEvent(&event) != 0) {
 				if (event.type == SDL_QUIT)
 					m_mainLoopDone = true;
 				if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(mSDL_Window))
 					m_mainLoopDone = true;
+
+				baseWindow.handleEvent();				
 			}
 		}
 	}
@@ -67,12 +72,9 @@ private:
 
 	bool m_mainLoopDone = false;
 
-	//Window focus
-	bool mMouseFocus = false;
-	bool mKeyboardFocus = false;
-	bool mFullScreen = false;
-	bool mMinimized = false;
-	bool mShown = false;
+	
+
+	BaseWindow baseWindow;
 
 	int initializeSDL() {
 		SDL_SetMainReady();
@@ -91,11 +93,7 @@ private:
 		else {
 			//Grab window identifier
 			mWindowID = SDL_GetWindowID(mSDL_Window);
-			ScreenInfo::mSDL_Window = mSDL_Window;
-			//Flag as opened
-			mShown = true;
-			mMouseFocus = true;
-			mKeyboardFocus = true;
+			ScreenInfo::mSDL_Window = mSDL_Window;			
 
 		}
 
@@ -121,11 +119,13 @@ private:
 		SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 		SDL_GetCurrentDisplayMode(0, &current);
 
+		baseWindow.Init(mSDL_Window, mRenderer, m_sdlRenderContext, mWindowID);
+
 		return 1;
 	}
 
 	int initializeGLEW() {
-		//glewExperimental = GL_TRUE;     // To expose all extensions with valid entry points.  2015-07-02
+		glewExperimental = GL_TRUE;     // To expose all extensions with valid entry points.  2015-07-02
 		GLenum err = glewInit();
 		if (GLEW_OK != err) {
 			fprintf(stderr, "Error: %p\n", glewGetErrorString(err));
