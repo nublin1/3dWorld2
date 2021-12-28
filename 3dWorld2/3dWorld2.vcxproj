@@ -116,14 +116,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>G:\Engines\Opengl\glew-2.1.0\include;G:\Engines\Opengl\SDL2-2.0.16\include;C:\Users\User\source\repos\3dWorld2\3dWorldFramework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Engines\Opengl\glew-2.1.0\include;E:\Engines\Opengl\SDL2-2.0.16\include;C:\Users\User\source\repos\3dWorld2\3dWorldFramework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>G:\Engines\Opengl\glew-2.1.0\lib\Release\x64;G:\Engines\Opengl\SDL2-2.0.16\lib\x64;C:\Users\User\source\repos\3dWorld2\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\Engines\Opengl\glew-2.1.0\lib\Release\x64;E:\Engines\Opengl\SDL2-2.0.16\lib\x64;C:\Users\User\source\repos\3dWorld2\x64\Debug</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;SDL2.lib;3dWorldFramework.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

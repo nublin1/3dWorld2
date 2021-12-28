@@ -16,6 +16,9 @@
     <Filter Include="Файлы заголовков\ShadersManager">
       <UniqueIdentifier>{8d763cf0-ba1c-45b5-a7b2-d219a7a5f68e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\IO">
+      <UniqueIdentifier>{34415d40-2a8e-49e7-8e75-6e9a459fa5d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -43,6 +46,9 @@
     </ClCompile>
     <ClCompile Include="GameObject.ixx">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="IOclass.ixx">
+      <Filter>Файлы заголовков\IO</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

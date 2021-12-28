@@ -10,7 +10,7 @@
 
 #include <SDL.h>
 
-import std.core;
+//import std.core;
 
 import ScreenInfo;
 import Time;
@@ -67,12 +67,7 @@ private:
 
 	bool m_mainLoopDone = false;
 
-	//Window focus
-	bool mMouseFocus = false;
-	bool mKeyboardFocus = false;
-	bool mFullScreen = false;
-	bool mMinimized = false;
-	bool mShown = false;
+	
 
 	int initializeSDL() {
 		SDL_SetMainReady();
@@ -91,11 +86,8 @@ private:
 		else {
 			//Grab window identifier
 			mWindowID = SDL_GetWindowID(mSDL_Window);
-			ScreenInfo::mSDL_Window = mSDL_Window;
-			//Flag as opened
-			mShown = true;
-			mMouseFocus = true;
-			mKeyboardFocus = true;
+			//ScreenInfo::mSDL_Window = mSDL_Window;
+			
 
 		}
 

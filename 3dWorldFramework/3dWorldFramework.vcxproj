@@ -124,7 +124,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>G:\Engines\Opengl\glew-2.1.0\include;G:\Engines\Opengl\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Engines\Opengl\glew-2.1.0\include;E:\Engines\Opengl\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <EnableModules>true</EnableModules>
     </ClCompile>
@@ -136,7 +136,7 @@
     <Lib>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <AdditionalLibraryDirectories>G:\Engines\Opengl\glew-2.1.0\lib\Release\x64;G:\Engines\Opengl\SDL2-2.0.16\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\Engines\Opengl\glew-2.1.0\lib\Release\x64;E:\Engines\Opengl\SDL2-2.0.16\lib\x64</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -173,6 +173,7 @@
   <ItemGroup>
     <ClCompile Include="3dWorldFramework.cpp" />
     <ClCompile Include="GameObject.ixx" />
+    <ClCompile Include="IOclass.ixx" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
