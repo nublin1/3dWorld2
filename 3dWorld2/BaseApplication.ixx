@@ -10,7 +10,7 @@
 
 #include <SDL.h>
 
-import std.core;
+//import std.core;
 
 import ScreenInfo;
 import Time;
@@ -39,9 +39,7 @@ public:
 		while (m_mainLoopDone == false) {
 			SDL_Event event;
 
-			Time::computeDeltaTime();		
-
-			
+			Time::computeDeltaTime();				
 			
 
 			while (SDL_PollEvent(&event) != 0) {

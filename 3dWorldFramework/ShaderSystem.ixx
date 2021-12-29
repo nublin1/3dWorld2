@@ -21,7 +21,7 @@ export namespace ShaderSystem {
 			shaderProgramName = std::get<2>(shadProgram);
 			m_shaderFolder = std::get<3>(shadProgram);
 		}
-		~ShaderProgram() {};
+		virtual ~ShaderProgram() {};
 
 		void reloadShader() {
 			glLinkProgram(shaderProgramID);

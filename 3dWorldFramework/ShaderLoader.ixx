@@ -6,6 +6,7 @@ module;
 #include <fileSystem>
 #include <iostream>
 #include <fstream> 
+#include <tuple>
 
 export module ShaderLoader;
 
@@ -40,7 +41,7 @@ public:
 
 			addShaderProgram();
 
-			//ShaderSystem::ShaderProgram shader_program(make_tuple(ShaderProgramID, shaders, shaderName, shaderFolder));
+			ShaderSystem::ShaderProgram shader_program(std::make_tuple(ShaderProgramID, shaders, shaderName, shaderFolder));
 			//ResourcesStorage::addShader(shaderName, shader_program);
 		}
 

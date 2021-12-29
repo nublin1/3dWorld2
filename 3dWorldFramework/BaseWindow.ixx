@@ -13,7 +13,6 @@
 #include <SDL.h>
 
 
-
 export module BaseWindow;
 
 export class BaseWindow {
