@@ -8,7 +8,7 @@
 #include <fcntl.h>
 #include <io.h>
 
-import std.core;
+//import std.core;
 import std.memory;
 
 import BaseApplication;
